@@ -12,6 +12,7 @@ describe('restartGame', () => {
     const correctAnswer = 10;
     const action = actions.restartGame(correctAnswer);
     expect(action.type).toEqual(actions.RESTART_GAME);
+    expect(action.correctAnswer).toEqual(correctAnswer);
   });
 });
 
@@ -20,5 +21,6 @@ describe('makeGuess', () => {
     const guess = 10;
     const action = actions.makeGuess(guess);
     expect(action.type).toEqual(actions.MAKE_GUESS);
+    expect(action.guess).toEqual(guess);
   });
 });
